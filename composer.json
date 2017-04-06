@@ -1,0 +1,33 @@
+{
+    "name": "sulaeman/social-login",
+    "description": "Magento 2 Social Login",
+    "type": "project",
+    "version": "1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sulaeman",
+            "email": "me@sulaeman.com",
+            "homepage": "https://www.sulaeman.com/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^5.5.9 || ^7.0",
+        "hybridauth/hybridauth": "^2.9.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.1.*",
+        "mockery/mockery": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sulaeman\\SocialLogin\\": "/"
+        },
+        "psr-0": {
+            "": "/"
+        }
+    },
+    "minimum-stability": "alpha",
+    "prefer-stable": true
+}

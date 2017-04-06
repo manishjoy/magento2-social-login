@@ -1,0 +1,102 @@
+.social-login-clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.popup-authentication .block[class]+.block.block-social-login {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.popup-authentication .actions-toolbar.social-btn {
+  margin-top: 10px !important;
+}
+.block-authentication .actions-toolbar.social-btn > .primary {
+  display: block;
+  float: none;
+}
+.actions-toolbar.social-btn>.primary .action,
+.actions-toolbar.social-btn>.secondary .action {
+  width: auto;
+}
+.social-btn button {
+  height: 35px;
+  border: none;
+  border-radius: 0;
+}
+.social-btn button span span {
+  margin-left: 25px;
+  color: #ffffff;
+}
+
+.social-login-container {
+  margin-bottom: 50px;
+}
+.social-login-container .block.block-social-login {
+  float: none;
+  width: 100%;
+}
+.social-login-container .actions-toolbar > .primary .action,
+.social-login-container .actions-toolbar > .secondary .action {
+  width: auto;
+}
+
+@media (min-width: 768px), print {
+  .customer-account-create .column.main:after {
+     content: " "; /* Older browser do not support empty content */
+     visibility: hidden;
+     display: block;
+     height: 0;
+     clear: both;
+  }
+  .customer-account-create .form.create.account {
+    float: left;
+  }
+  .customer-account-create .social-login-container {
+    float: right;
+    width: 45%;
+  }
+  .customer-account-create .social-login-container .actions-toolbar > .primary {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 959px), print {
+  .customer-account-create .social-login-container {
+    margin-top: 50px;
+  }
+  .customer-account-create .form.create.account {
+    float: none;
+  }
+  .customer-account-create .social-login-container {
+    float: none;
+    width: 100%;
+  }
+}
+
+.authentication-dropdown .block-social-login {
+  margin-top: 40px;
+}
+.authentication-dropdown .block-social-login .actions-toolbar {
+  display: inline-block;
+}
+
+.facebook-login button {
+  background: url("../img/buttons/facebook.png") no-repeat;
+}
+.google-login button {
+  background: url("../img/buttons/google.png") no-repeat;
+}
+.steam-login button {
+  background: url("../img/buttons/steam.png") no-repeat;
+}
+.paypal-login button {
+  background: url("../img/buttons/paypal.png") no-repeat;
+}
+
+@media (min-width: 768px), print {
+  .popup-authentication .modal-inner-wrap {
+    width: 68%;
+  }
+}

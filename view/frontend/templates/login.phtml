@@ -1,0 +1,44 @@
+<?php
+/**
+ * This file is part of the Sulaeman Social Login package.
+ *
+ * @author Sulaeman <me@sulaeman.com>
+ * @copyright Copyright (c) 2017
+ * @package Sulaeman_SocialLogin
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<?php $availableLogins = $block->getAvailableLogins(); ?>
+<?php if ( ! empty($availableLogins)) : ?>
+<div class="block block-social-login">
+    <div class="block-title">
+        <strong id="block-customer-login-heading" role="heading" aria-level="2"><?php /* @escapeNotVerified */ echo __('Sign In using your social account') ?></strong>
+    </div>
+    <div class="block-content" aria-labelledby="block-social-login-heading">
+        <div class="actions-toolbar">
+        <?php foreach ($availableLogins as $login) : ?>
+            <div class="primary social-btn <?php echo $login['identifier']; ?>-login">
+                <button id="btn_<?php echo $login['identifier']; ?>_login" class="action btn_<?php echo $login['identifier']; ?>_login" type="button" data-login='<?php echo json_encode($login); ?>'>
+                    <span>
+                        <span><?php echo __('%1 Sign In', $login['label']); ?></span>
+                    </span>
+                </button>
+            </div>
+        <?php endforeach; ?>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    require(['jquery', 'Sulaeman_SocialLogin/js/social-login'], function($, socialLogin) { 
+        "use strict";
+
+        $('.social-login-container .social-btn > button.action').on('click', function(e) {
+            socialLogin.popup($(this).data('login'));
+        });
+    });
+</script>
+<?php endif; ?>

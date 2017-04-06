@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * This file is part of the Sulaeman Social Login package.
+ *
+ * @author Sulaeman <me@sulaeman.com>
+ * @copyright Copyright (c) 2017
+ * @package Sulaeman_SocialLogin
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <sulaeman_social_login>
+            <general>
+                <is_enabled>1</is_enabled>
+                <popup_effect>mfp-zoom-in</popup_effect>
+                <style>#3399cc</style>
+            </general>
+            <facebook>
+                <is_enabled>0</is_enabled>
+                <permissions>email, user_about_me, user_birthday, user_hometown, user_website</permissions>
+            </facebook>
+            <google>
+                <is_enabled>0</is_enabled>
+                <permissions>https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email</permissions>
+                <window_width>500</window_width>
+                <window_height>300</window_height>
+            </google>
+            <steam>
+                <is_enabled>0</is_enabled>
+                <client_id>https://steamcommunity.com/openid</client_id>
+                <permissions></permissions>
+                <window_width>500</window_width>
+                <window_height>650</window_height>
+            </steam>
+            <paypal>
+                <is_enabled>0</is_enabled>
+                <permissions>openid profile email address phone https://uri.paypal.com/services/expresscheckout</permissions>
+                <window_width>500</window_width>
+                <window_height>600</window_height>
+            </paypal>
+        </sulaeman_social_login>
+    </default>
+</config>

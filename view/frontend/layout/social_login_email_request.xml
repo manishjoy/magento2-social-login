@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * This file is part of the Sulaeman Social Login package.
+ *
+ * @author Sulaeman <me@sulaeman.com>
+ * @copyright Copyright (c) 2017
+ * @package Sulaeman_SocialLogin
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="root">
+            <action method="setHeaderTitle">
+                <argument translate="true" name="title" xsi:type="string">Provide your email address</argument>
+            </action>
+        </referenceBlock>
+
+        <referenceContainer name="header.container" remove="true" />
+        <referenceContainer name="page.top" remove="true" />
+        <referenceContainer name="footer" remove="true" />
+
+        <referenceBlock name="base-header-container" remove="true" />
+        <referenceBlock name="base-footer-container" remove="true" />
+
+        <referenceContainer name="content">
+            <block class="Sulaeman\SocialLogin\Block\EmailRequest" name="social_login.email.request" template="email-request.phtml" cacheable="false" />
+        </referenceContainer>
+    </body>
+</page>

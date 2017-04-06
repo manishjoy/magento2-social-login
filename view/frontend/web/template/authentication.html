@@ -1,0 +1,30 @@
+<!--
+/**
+ * This file is part of the Sulaeman Social Login package.
+ *
+ * @author Sulaeman <me@sulaeman.com>
+ * @copyright Copyright (c) 2017
+ * @package Sulaeman_SocialLogin
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+ -->
+
+<!-- ko if: socialLoginButtons -->
+<div class="block block-social-login" data-bind="attr: {'data-label': $t('or')}">
+    <div class="block-content" aria-labelledby="block-social-login-heading">
+        <!-- ko foreach: socialLoginButtons -->
+        <div data-bind="attr: {class: 'actions-toolbar social-btn %1-login'.replace('%1', identifier)}">
+            <div class="primary">
+                <button data-bind="attr: {id: 'btn_%1_login'.replace('%1', identifier), class: 'action btn_%1_login'.replace('%1', identifier)}, click: $parent.openPopupSocialLogin" type="button">
+                    <span>
+                        <span data-bind="text: $t('%1 Sign In').replace('%1', label)"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <!--/ko-->
+    </div>
+</div>
+<!-- /ko -->

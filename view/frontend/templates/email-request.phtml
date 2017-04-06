@@ -1,0 +1,36 @@
+<?php
+/**
+ * This file is part of the Sulaeman Social Login package.
+ *
+ * @author Sulaeman <me@sulaeman.com>
+ * @copyright Copyright (c) 2017
+ * @package Sulaeman_SocialLogin
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<form method="POST" class="popup-authentication">
+    <fieldset class="fieldset">
+        <div class="field email required">
+            <label class="label" for="email"><?php /* @escapeNotVerified */ echo __('Email Address') ?></label>
+            <div class="control">
+                <input name="email" type="email" class="input-text" autocomplete="off" />
+            </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" name="continue" value="1" class="action secondary">
+                <?php /* @escapeNotVerified */ echo __('Continue') ?>
+            </button>
+        </div>
+        <div class="secondary">
+            <button type="submit" name="cancel" value="1">
+                <?php /* @escapeNotVerified */ echo __('Cancel') ?>
+            </button>
+        </div>
+    </div>
+</form>
