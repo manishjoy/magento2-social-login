@@ -68,8 +68,7 @@ class Info extends Action
                 $this->helper->buildXmlPath($key);
 
                 if ($this->helper->isEnabled()
-                 && $this->helper->getClientId()
-                  && $this->helper->getClientSecret()) {
+                 && $this->helper->getClientId()) {
                     $availabelLogins[] = [
                         'identifier' => $key, 
                         'label'      => $label,
